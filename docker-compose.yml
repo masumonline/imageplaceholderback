@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  manasky:
+    ports:
+      - '8080:8080'
+    volumes:
+      - './images:/app/images'
+    environment:
+      HOST: '0.0.0.0:8080'
+      DIR: '/app/images'
+      MIN_WIDTH: 20
+    image: 'ghcr.io/manasky/lorem-server:latest'
